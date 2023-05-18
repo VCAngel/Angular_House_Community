@@ -1,1 +1,15 @@
-<p>houses works!</p>
+<main>
+  <h2>Casas y Departamentos en Venta</h2>
+
+  <div>
+    <!-- Anuncios -->
+    <app-house-card *ngFor="let house of houseList"
+    [house]="house"></app-house-card>
+  </div>
+
+  <div>
+    <!-- todo routing -->
+
+    <a href="#">Ver Todas</a>
+  </div>
+</main>

@@ -1,0 +1,26 @@
+<div>
+  <img [src]="imgSrc" [alt]="house.title">
+  <div>
+    <h3>{{house.title}}</h3>
+    <p>{{house.description}}</p>
+    <p>{{house.price | currency:"MX"}}</p>
+
+    <ul>
+      <li>
+        <img src="./assets/svg/icono_wc.svg" alt="icono wc">
+        <p>{{house.bathroomCount}}</p>
+      </li>
+      <li>
+        <img src="./assets/svg/icono_estacionamiento.svg" alt="icono autos">
+        <p>{{house.parkingCount}}</p>
+      </li>
+      <li>
+        <img src="./assets/svg/icono_dormitorio.svg" alt="icono cama">
+        <p>{{house.bedroomCount}}</p>
+      </li>
+    </ul>
+
+    <!-- Todo routing -->
+    <a href="#">Ver Propiedad</a>
+  </div>
+</div>
