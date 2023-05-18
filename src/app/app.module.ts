@@ -8,6 +8,8 @@ import { HousesComponent } from './components/houses/houses.component';
 import { AboutUsEntryComponent } from './components/about-us-entry/about-us-entry.component';
 import { HouseCardComponent } from './components/house-card/house-card.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,10 +17,11 @@ import { HouseCardComponent } from './components/house-card/house-card.component
     AboutUsComponent,
     HousesComponent,
     AboutUsEntryComponent,
-    HouseCardComponent,
+    HouseCardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

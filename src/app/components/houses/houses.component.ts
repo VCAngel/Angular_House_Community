@@ -15,8 +15,7 @@ export class HousesComponent {
       bathroomCount: 1,
       parkingCount: 2,
       bedroomCount: 2,
-    },
-    {
+    }, {
       title: 'Apartamento en el Centro',
       description: 'Moderno apartamento en el corazón de la ciudad',
       price: 1500000,

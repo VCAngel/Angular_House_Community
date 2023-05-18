@@ -1,5 +1,11 @@
 <div>
-  <img [src]="imgSrc" [alt]="house.title">
+  <img *ngIf="imgSrc; else imgNotFound" [src]="imgSrc" [alt]="house.title">
+
+  <ng-template #imgNotFound>
+    <!-- For when request limit is hit -->
+    <img src="./assets/img/not-found.webp" alt="image not found!">
+  </ng-template>
+
   <div>
     <h3>{{house.title}}</h3>
     <p>{{house.description}}</p>
