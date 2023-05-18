@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { BlogArticle } from 'src/app/models/blog-article.model';
+import { ImageParameters } from 'src/app/models/image-service.model';
 
 @Component({
   selector: 'app-blog-article',
@@ -11,6 +12,10 @@ export class BlogArticleComponent {
     title: '',
     description: '',
     author: '',
-    date: undefined
+    date: undefined,
+    imgSearchParameters: {
+      query: '',
+      orientation: '',
+    }
   }
 }

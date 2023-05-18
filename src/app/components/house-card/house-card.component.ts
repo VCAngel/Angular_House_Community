@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { House } from 'src/app/models/house-card.model';
+import { ImageParameters } from 'src/app/models/image-service.model';
 import { ImageService } from 'src/app/services/image.service';
 
 @Component({
@@ -7,9 +8,7 @@ import { ImageService } from 'src/app/services/image.service';
   templateUrl: './house-card.component.html',
   styleUrls: ['./house-card.component.css']
 })
-export class HouseCardComponent implements OnInit {
-  imgSrc = '';
-
+export class HouseCardComponent  {
   @Input() house: House = {
     title: '',
     description: '',
@@ -19,12 +18,8 @@ export class HouseCardComponent implements OnInit {
     bedroomCount: 0
   }
 
-  constructor(private imageService: ImageService) { }
-
-  ngOnInit(): void {
-    this.imageService.getImageByQuery('house-exterior')
-      .subscribe(res => {
-        this.imgSrc = res.urls.regular;
-      });
+  imgSearchParameters: ImageParameters = {
+    query: 'house-exterior',
+    orientation: 'squarish'
   }
 }

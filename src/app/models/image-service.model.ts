@@ -7,3 +7,9 @@ export interface FetchedImage{
     thumb: string;
   }
 }
+
+export interface ImageParameters{
+  query: string;
+  orientation: 'portrait' | 'landscape' | 'squarish' | '';
+}
+
