@@ -9,6 +9,9 @@ import { AboutUsEntryComponent } from './components/about-us-entry/about-us-entr
 import { HouseCardComponent } from './components/house-card/house-card.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { BlogComponent } from './components/blog/blog.component';
+import { BlogArticleComponent } from './components/blog-article/blog-article.component';
+import { ImgComponent } from './components/img/img.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
     AboutUsComponent,
     HousesComponent,
     AboutUsEntryComponent,
-    HouseCardComponent
+    HouseCardComponent,
+    BlogComponent,
+    BlogArticleComponent,
+    ImgComponent
   ],
   imports: [
     BrowserModule,
