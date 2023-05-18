@@ -1,0 +1,10 @@
+<section>
+  <!-- pipes to capitalize -->
+  <h2>mas sobre nosotros</h2>
+
+  <div class="iconos-nosotros">
+    <!-- About entries -->
+    <app-about-us-entry *ngFor="let entry of aboutEntries"
+    [entry]="entry"></app-about-us-entry>
+  </div>
+</section>
