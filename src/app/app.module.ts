@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogArticleComponent } from './components/blog-article/blog-article.component';
 import { ImgComponent } from './components/img/img.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ImgComponent } from './components/img/img.component';
     HouseCardComponent,
     BlogComponent,
     BlogArticleComponent,
-    ImgComponent
+    ImgComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
