@@ -1,19 +1,22 @@
-<header>
-  <div>
-    <div>
-      <a href="/">
+<header [ngClass]="isLanding ? ['BR-header','sm:h-[100vh]', 'pt-6 pb-0 px-0']: ['py-6']"
+  class="bg-gray-800 sm:px-7 object-contain object-bottom h-fit">
+  <div class="flex flex-col justify-between h-full">
+    <div class="flex flex-col sm:flex-row sm:justify-between items-center gap-3">
+      <a href="/" class="">
         <img [src]="logo" alt="Logo">
       </a>
 
-      <nav>
+      <nav class="flex flex-row items-center gap-4 sm:gap-5 h-full">
         <!-- Routing Pending -->
-        <a href="#">nosotros</a>
-        <a href="#">anuncios</a>
-        <a href="#">blog</a>
-        <a href="#">contacto</a>
+        <a href="#" class="capitalize text-white font-medium text-lg">nosotros</a>
+        <a href="#" class="capitalize text-white font-medium text-lg">anuncios</a>
+        <a href="#" class="capitalize text-white font-medium text-lg">blog</a>
+        <a href="#" class="capitalize text-white font-medium text-lg">contacto</a>
       </nav>
     </div>
 
-    <h1>Venta de Casa y Departamentos Exclusivos de Lujo</h1>
+    <h1 *ngIf="isLanding"
+      class=" leading-loose sm:leading-loose text-xl sm:text-4xl font-bold text-white text-center sm:text-start max-w-full sm:max-w-xl py-3">
+      Venta de Casa y Departamentos Exclusivos de Lujo</h1>
   </div>
 </header>
