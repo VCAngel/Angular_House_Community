@@ -13,6 +13,7 @@ export class ImgComponent implements OnInit {
     query: '',
     orientation: ''
   }
+  @Input() imgClass: string[] = [];
 
   constructor(private imageService: ImageService) { }
 

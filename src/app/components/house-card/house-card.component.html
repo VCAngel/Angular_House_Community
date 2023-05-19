@@ -1,27 +1,31 @@
-<div>
-  <app-img [imageParams]="imgSearchParameters"></app-img>
+<div class="bg-gray-100 rounded-sm border-solid border-[1px] border-teal-100">
+  <app-img [imgClass]="['object-center', 'object-cover', 'max-h-[16rem]', 'w-full']" [imageParams]="imgSearchParameters"></app-img>
 
-  <div>
-    <h3>{{house.title}}</h3>
-    <p>{{house.description}}</p>
-    <p>{{house.price | currency:"MX"}}</p>
+  <div class="p-6 flex flex-col gap-2  justify-between h-[22rem]">
+    <h3 class="font-medium text-2xl line-clamp-2">{{house.title}}</h3>
+    <p class="line-clamp-2">{{house.description}}</p>
+    <p class="font-bold text-lime-600">{{house.price | currency:"MX"}}</p>
 
-    <ul>
-      <li>
+    <ul class="w-full grid grid-cols-3 ">
+      <li class="w-full flex items-center gap-3">
         <img src="./assets/svg/icono_wc.svg" alt="icono wc">
         <p>{{house.bathroomCount}}</p>
       </li>
-      <li>
+      <li class="w-full flex items-center gap-3">
         <img src="./assets/svg/icono_estacionamiento.svg" alt="icono autos">
         <p>{{house.parkingCount}}</p>
       </li>
-      <li>
+      <li class="w-full flex items-center gap-3">
         <img src="./assets/svg/icono_dormitorio.svg" alt="icono cama">
         <p>{{house.bedroomCount}}</p>
       </li>
     </ul>
 
     <!-- Todo routing -->
-    <a href="#">Ver Propiedad</a>
+    <div class="w-full flex justify-end pt-4">
+      <a href="#"
+        class="bg-yellow-500 px-6 py-2 font-medium text-center text-md text-white rounded-sm uppercase w-full sm:w-fit">Ver
+        Propiedad</a>
+    </div>
   </div>
 </div>

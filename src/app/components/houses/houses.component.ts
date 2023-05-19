@@ -89,4 +89,30 @@ export class HousesComponent {
     }
   ];
 
+  previewList: House[] = [
+    {
+      title: 'Casa de Lujo en el Lago',
+      description: 'Casa al lado de un lago',
+      price: 1000000,
+      bathroomCount: 1,
+      parkingCount: 2,
+      bedroomCount: 2,
+    }, {
+      title: 'Apartamento en el Centro',
+      description: 'Moderno apartamento en el corazón de la ciudad',
+      price: 1500000,
+      bathroomCount: 2,
+      parkingCount: 1,
+      bedroomCount: 3,
+    },
+    {
+      title: 'Villa en la Montaña',
+      description: 'Espectacular villa con vistas a las montañas',
+      price: 2500000,
+      bathroomCount: 3,
+      parkingCount: 3,
+      bedroomCount: 4,
+    }
+  ]
+
 }

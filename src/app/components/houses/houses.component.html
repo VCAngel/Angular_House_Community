@@ -1,14 +1,14 @@
-<main>
-  <h2>Casas y Departamentos en Venta</h2>
+<main class="py-10 px-6 lg:px-16">
+  <h2 class="text-center text-2xl sm:text-4xl mb-10">Casas y Departamentos en Venta</h2>
 
-  <div>
+  <div class="flex flex-col gap-6 sm:gap-8 sm:grid sm:grid-cols-2 lg:grid-cols-3 ">
     <!-- Anuncios -->
-    <app-house-card *ngFor="let house of houseList"
-    [house]="house"></app-house-card>
+    <app-house-card *ngFor="let house of previewList" [house]="house"></app-house-card>
   </div>
 
-  <div>
+  <div class="w-full flex justify-end pt-4">
     <!-- todo routing -->
-    <a href="#">Ver Todas</a>
+    <a href="#"
+    class="bg-lime-500 px-6 py-2 font-medium text-center text-lg text-white rounded-sm uppercase w-full sm:w-fit">Ver todas</a>
   </div>
 </main>

@@ -1,6 +1,6 @@
-<img *ngIf="imgSrc; else imgNotFound" [src]="imgSrc" [alt]="imageParams.query">
+<img [class]="imgClass" *ngIf="imgSrc; else imgNotFound" [src]="imgSrc" [alt]="imageParams.query">
 
 <ng-template #imgNotFound>
   <!-- For when request limit is hit -->
-  <img src="./assets/img/not-found.webp" alt="image not found!">
+  <img [class]="imgClass" src="./assets/img/not-found.webp" alt="image not found!">
 </ng-template>
