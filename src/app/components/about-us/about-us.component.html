@@ -1,10 +1,8 @@
-<section>
-  <!-- pipes to capitalize -->
-  <h2>mas sobre nosotros</h2>
+<section class="py-10 px-6">
+  <h2 class="capitalize text-center text-2xl sm:text-4xl mb-10">mas sobre nosotros</h2>
 
-  <div class="iconos-nosotros">
+  <div class="flex flex-col md:flex-row gap-6 sm:gap-8">
     <!-- About entries -->
-    <app-about-us-entry *ngFor="let entry of aboutEntries"
-    [entry]="entry"></app-about-us-entry>
+    <app-about-us-entry *ngFor="let entry of aboutEntries" [entry]="entry"></app-about-us-entry>
   </div>
 </section>
