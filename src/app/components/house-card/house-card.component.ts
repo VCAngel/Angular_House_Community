@@ -1,7 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { House } from 'src/app/models/house-card.model';
 import { ImageParameters } from 'src/app/models/image-service.model';
-import { ImageService } from 'src/app/services/image.service';
 
 @Component({
   selector: 'app-house-card',
