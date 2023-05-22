@@ -1,9 +1,9 @@
 <article class="entrada-blog flex flex-col md:flex-row gap-4">
-  <app-img [imgClass]="['max-w-[16rem]','md:max-w-[24rem]']" [imageParams]="article.imgSearchParameters"></app-img>
+  <app-img [imgClass]="['object-center','object-cover','max-h-[16rem]','w-full','md:w-auto','md:max-w-[18rem]']" [imageParams]="article.imgSearchParameters"></app-img>
   <div class="pb-4">
     <!-- todo routing -->
     <a href="#" class="after:content-[''] after:block after:w-full after:max-w-[16rem] after:h-1 after:my-1 after:bg-lime-500">
-      <h4 class="font-bold text-2xl md:text-4xl pb-4">{{article.title}}</h4>
+      <h4 class="font-bold text-2xl pb-4">{{article.title}}</h4>
     </a>
     <p class="pb-2">Escrito el: <span class="text-yellow-500 font-semibold">{{article.date | date:"dd/MM/yy"}}</span>
       por: <span class="text-yellow-500 font-semibold">{{article.author}}</span></p>
