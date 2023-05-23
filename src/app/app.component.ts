@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChangeHeaderService } from './services/change-header.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular_House_Community';
+  isLanding = true;
+
+  constructor(public chService: ChangeHeaderService) { }
+
+  setIsLanding(state: boolean) {
+    this.isLanding = state;
+  }
 }

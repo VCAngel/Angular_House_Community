@@ -1,11 +1,10 @@
 <footer class="bg-gray-800 p-6 sm:px-7 object-contain object-bottom h-fit">
   <div class="block sm:flex sm:justify-between sm:align-center text-white gap-8">
     <nav class="flex gap-4 md:gap-5 flex-wrap align-center justify-between">
-      <!-- todo routing -->
-      <a href="#" class="capitalize text-md font-medium">nosotros</a>
-      <a href="#" class="capitalize text-md font-medium">anuncios</a>
-      <a href="#" class="capitalize text-md font-medium">blog</a>
-      <a href="#" class="capitalize text-md font-medium">contacto</a>
+      <a (click)="chService.setIsLanding(false)" routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page" class="capitalize text-md font-medium">nosotros</a>
+      <a (click)="chService.setIsLanding(false)" routerLink="/houses" routerLinkActive="active" ariaCurrentWhenActive="page" class="capitalize text-md font-medium">anuncios</a>
+      <a (click)="chService.setIsLanding(false)" routerLink="/blog" routerLinkActive="active" ariaCurrentWhenActive="page" class="capitalize text-md font-medium">blog</a>
+      <a (click)="chService.setIsLanding(false)" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page" class="capitalize text-md font-medium">contacto</a>
     </nav>
 
     <p class="mt-2 sm:m-0">Todos los derechos reservados - 2023 &copy;</p>

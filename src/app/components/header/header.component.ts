@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ChangeHeaderService } from 'src/app/services/change-header.service';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class HeaderComponent {
   logo = './assets/svg/logo.svg';
-  @Input() isLanding = true;
+  @Input() isLanding = false;
+
+  constructor(public chService: ChangeHeaderService){}
+
 }
