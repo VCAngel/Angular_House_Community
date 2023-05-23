@@ -1,12 +1,20 @@
 <main class="py-10 px-6 lg:px-16">
   <h2 class="text-center text-2xl sm:text-4xl mb-10">Casas y Departamentos en Venta</h2>
 
-  <div class="flex flex-col gap-6 sm:gap-8 sm:grid sm:grid-cols-2 lg:grid-cols-3 ">
+  <div class="flex flex-col gap-6 sm:gap-8 sm:grid sm:grid-cols-2 lg:grid-cols-3" *ngIf="chService.getIsLanding(); else fullList">
     <!-- Anuncios -->
     <app-house-card *ngFor="let house of previewList" [house]="house"></app-house-card>
   </div>
 
-  <div class="w-full flex justify-end pt-4">
+  <ng-template #fullList>
+    <!-- ! Esto debería hacerse con un API, pero pues es un test -->
+    <div class="flex flex-col gap-6 sm:gap-8 sm:grid sm:grid-cols-2 lg:grid-cols-3" >
+      <!-- Anuncios -->
+      <app-house-card *ngFor="let house of houseList" [house]="house"></app-house-card>
+    </div>
+  </ng-template>
+
+  <div class="w-full flex justify-end pt-4" *ngIf="chService.getIsLanding()">
     <a (click)="chService.setIsLanding(false)" routerLink="/houses" routerLinkActive="active" ariaCurrentWhenActive="page"
     class="bg-lime-500 px-6 py-2 font-medium text-center text-lg text-white rounded-sm uppercase w-full sm:w-fit">Ver todas</a>
   </div>
