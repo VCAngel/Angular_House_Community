@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BlogArticle } from 'src/app/models/blog-article.model';
+import { ChangeHeaderService } from 'src/app/services/change-header.service';
 
 @Component({
   selector: 'app-blog',
@@ -47,4 +48,29 @@ export class BlogComponent {
       orientation: 'landscape'
     }
   }]
+
+  previewArticles: BlogArticle[] = [
+    {
+      title: 'Ideas para renovar tu baño',
+      author: 'BathDesignGuru',
+      date: new Date(2023, 6, 12),
+      description: 'Inspírate con estas ideas innovadoras y funcionales para renovar tu baño y crear un espacio relajante.',
+      imgSearchParameters: {
+        query: 'bathroom renovation',
+        orientation: 'landscape'
+      }
+    },
+    {
+      title: 'Consejos para mantener un jardín saludable',
+      author: 'GreenThumbExpert',
+      date: new Date(2023, 8, 20),
+      description: 'Aprende cómo cuidar y mantener tu jardín en óptimas condiciones, desde el riego adecuado hasta el control de plagas.',
+      imgSearchParameters: {
+        query: 'healthy garden',
+        orientation: 'landscape'
+      }
+    }
+  ]
+
+  constructor(public chService: ChangeHeaderService) { }
 }
