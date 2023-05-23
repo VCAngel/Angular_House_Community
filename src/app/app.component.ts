@@ -7,11 +7,15 @@ import { ChangeHeaderService } from './services/change-header.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isLanding = true;
+  private isLanding = false;
 
   constructor(public chService: ChangeHeaderService) { }
 
   setIsLanding(state: boolean) {
     this.isLanding = state;
+  }
+
+  getIsLanding(){
+    return this.isLanding;
   }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { House } from 'src/app/models/house-card.model';
+import { ChangeHeaderService } from 'src/app/services/change-header.service';
 
 @Component({
   selector: 'app-houses',
@@ -114,5 +115,7 @@ export class HousesComponent {
       bedroomCount: 4,
     }
   ]
+
+  constructor(public chService: ChangeHeaderService){}
 
 }

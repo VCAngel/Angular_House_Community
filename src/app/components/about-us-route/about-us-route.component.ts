@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChangeHeaderService } from 'src/app/services/change-header.service';
 
 @Component({
   selector: 'app-about-us-route',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-us-route.component.css']
 })
 export class AboutUsRouteComponent {
-
+  constructor(public chService: ChangeHeaderService) {
+    chService.setIsLanding(false);
+  }
 }
