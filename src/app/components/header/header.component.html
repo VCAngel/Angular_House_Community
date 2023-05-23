@@ -2,16 +2,20 @@
   class="bg-gray-800 px-6 sm:px-7 object-contain object-bottom h-fit">
   <div class="flex flex-col justify-between h-full">
     <div class="flex flex-col sm:flex-row sm:justify-between items-center gap-3">
-      <a href="/" class="">
+      <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="">
         <img [src]="logo" alt="Logo">
       </a>
 
       <nav class="flex flex-row flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-5 h-full">
         <!-- Routing Pending -->
-        <a href="#" class="capitalize text-white font-medium text-lg">nosotros</a>
-        <a href="#" class="capitalize text-white font-medium text-lg">anuncios</a>
-        <a href="#" class="capitalize text-white font-medium text-lg">blog</a>
-        <a href="#" class="capitalize text-white font-medium text-lg">contacto</a>
+        <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page"
+          class="capitalize text-white font-medium text-lg">nosotros</a>
+        <a routerLink="/houses" routerLinkActive="active" ariaCurrentWhenActive="page"
+          class="capitalize text-white font-medium text-lg">anuncios</a>
+        <a routerLink="/blog" routerLinkActive="active" ariaCurrentWhenActive="page"
+          class="capitalize text-white font-medium text-lg">blog</a>
+        <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page"
+          class="capitalize text-white font-medium text-lg">contacto</a>
       </nav>
     </div>
 
