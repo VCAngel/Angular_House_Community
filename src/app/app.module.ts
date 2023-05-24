@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RoutingModule } from './modules/routing/routing.module';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -19,6 +20,7 @@ import { AboutUsRouteComponent } from './components/about-us-route/about-us-rout
 import { HousesRouteComponent } from './components/houses-route/houses-route.component';
 import { BlogRouteComponent } from './components/blog-route/blog-route.component';
 import { ContactRouteComponent } from './components/contact-route/contact-route.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +38,14 @@ import { ContactRouteComponent } from './components/contact-route/contact-route.
     AboutUsRouteComponent,
     HousesRouteComponent,
     BlogRouteComponent,
-    ContactRouteComponent
+    ContactRouteComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RoutingModule
+    RoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

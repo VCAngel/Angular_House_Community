@@ -1,0 +1,63 @@
+<h3 class="py-10 px-6 lg:px-16 text-center text-2xl sm:text-4xl">Llena el Formulario</h3>
+
+<form action="" class="max-w-[48rem] mx-auto">
+  <fieldset class="border border-gray-500 p-4">
+    <legend class="px-1 text-xl sm:text-2xl text-gray-500">Información Personal</legend>
+    <label class="block uppercase font-semibold text-md pb-1" for="name">Nombre:</label>
+    <input required class="px-2 py-1 mb-2 border border-gray-400 rounded-sm bg-gray-100 w-full invalid:border-red-400"
+      type="text" id="name" placeholder="Ingresa tu nombre">
+
+    <label class="block uppercase font-semibold text-md pb-1" for="email">E-mail:</label>
+    <input required class="px-2 py-1 mb-2 border border-gray-400 rounded-sm bg-gray-100 w-full invalid:border-red-400"
+      type="email" id="email" placeholder="ejemplo@correo.com">
+
+    <label class="block uppercase font-semibold text-md pb-1" for="phone">Teléfono:</label>
+    <input required class="px-2 py-1 mb-2 border border-gray-400 rounded-sm bg-gray-100 w-full invalid:border-red-400"
+      type="tel" id="phone" placeholder="Tu teléfono">
+
+    <label class="block uppercase font-semibold text-md pb-1" for="msg">Mensaje:</label>
+    <textarea class="px-2 py-1 mb-2 border border-gray-400 rounded-sm bg-gray-100 w-full" id="msg" cols="30" rows="3"
+      placeholder="Escribe tu mensaje"></textarea>
+  </fieldset>
+
+  <fieldset class="border border-gray-500 p-4">
+    <legend class="px-1 text-xl sm:text-2xl text-gray-500">Información sobre Propiedad</legend>
+    <label class="block uppercase font-semibold text-md pb-1" for="tradeType">Vende o Compra:</label>
+    <select required class="px-2 py-1 mb-2 border border-gray-400 rounded-sm bg-gray-100 w-full invalid:border-red-400"
+      id="tradeType">
+      <option value="" selected disabled>-- Seleccione --</option>
+      <option value="Buy">Compra</option>
+      <option value="Sell">Venta</option>
+    </select>
+
+    <label class="block uppercase font-semibold text-md pb-1" for="quantity">Cantidad:</label>
+    <input required class="px-2 py-1 mb-2 border border-gray-400 rounded-sm bg-gray-100 w-full invalid:border-red-400"
+      type="number" min="0" max="100" id="quantity">
+  </fieldset>
+
+  <fieldset class="border border-gray-500 p-4">
+    <legend class="px-1 text-xl sm:text-2xl text-gray-500">Contacto</legend>
+    <p class="text-gray-500 pb-2">¿Cómo desea ser contactado?</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full">
+      <div class="sm:col-span-1 grid grid-cols-2 grid-rows-2 w-full h-fit justify-start items-center">
+        <label class="block uppercase font-semibold text-md pb-1 overflow-clip text-ellipsis whitespace-nowrap" for="contact-tel">Teléfono:</label>
+        <input required #telRadioInput="ngModel" [(ngModel)]="isTelContact" type="radio" id="contact-tel" name="contact"
+          [value]="true">
+        <label class="block uppercase font-semibold text-md pb-1 overflow-clip text-ellipsis whitespace-nowrap" for="contact-email">E-mail:</label>
+        <input required #emailRadioInput="ngModel" [(ngModel)]="isTelContact" type="radio" id="contact-email"
+          name="contact" [value]="false">
+      </div>
+
+      <div class="sm:col-span-2" *ngIf="isTelContact">
+        <p class="text-gray-500 pb-2">Elija la fecha y hora para la llamada</p>
+        <label class="block uppercase font-semibold text-md pb-1" for="tel-date">Fecha:</label>
+        <input class="px-2 py-1 mb-2 border border-gray-400 rounded-sm bg-gray-100 w-full invalid:border-red-400" required type="date" id="tel-date">
+        <label class="block uppercase font-semibold text-md pb-1" for="tel-time">Hora:</label>
+        <input class="px-2 py-1 mb-2 border border-gray-400 rounded-sm bg-gray-100 w-full invalid:border-red-400" required type="time" id="tel-time">
+      </div>
+    </div>
+
+  </fieldset>
+
+  <input class="bg-lime-500 mt-4 ml-auto px-6 py-2 font-medium text-center text-lg text-white rounded-sm uppercase w-full sm:w-fit block" type="submit">
+</form>
